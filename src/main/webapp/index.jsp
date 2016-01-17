@@ -22,11 +22,13 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="inactive"><a href="drivers.jsp">Kierowcy</a></li>
-                <li class="inactive"><a href="vehicles.jsp">Pojazdy</a></li>
+                <li class="inactive"><a href="${pageContext.request.contextPath}/drivers.jsp">Kierowcy</a></li>
+                <li class="inactive"><a href="${pageContext.request.contextPath}/vehicles.jsp">Pojazdy</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
         </nav>
+        <a type="button" class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/drivers.jsp">Kierowcy</a>
+        <a type="button" class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/vehicles.jsp">Pojazdy</a>
 </body>
 </html>
