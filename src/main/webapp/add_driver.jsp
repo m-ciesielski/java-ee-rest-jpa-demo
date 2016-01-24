@@ -54,11 +54,11 @@ pageEncoding="UTF-8"
   <form name="add_driver_form" id="add_driver_form" modelAttribute="addDriverForm" data-toggle="validator" onsubmit="return addDriver('${pageContext.request.contextPath}');">
       <div class="form-group">
         <label for="firstName">Imie:</label>
-        <input type="text" class="form-control" name="firstName"  path="firstName" id="firstName" required="true" />
+        <input type="text" class="form-control" minlength="2" name="firstName"  path="firstName" id="firstName" required="true" />
       </div>
       <div class="form-group">
         <label for="lastName">Nazwisko:</label>
-        <input type="text" class="form-control" id="lastName"  path="lastName" name="lastName" required="true" />
+        <input type="text" class="form-control" minlength="2" id="lastName"  path="lastName" name="lastName" required="true" />
       </div>
       <div class="form-group">
               <label for="pesel">Pesel:</label>
@@ -68,7 +68,7 @@ pageEncoding="UTF-8"
               <label for="salary">Pensja:</label>
               <div class="input-group">
                   <span class="input-group-addon">zł</span>
-                  <input type="number" class="form-control" id="salary" name="salary"  path="salary" />
+                  <input type="number" class="form-control" id="salary" name="salary"  path="salary" required="true" />
               </div>
              </div>
             <div class="form-group">

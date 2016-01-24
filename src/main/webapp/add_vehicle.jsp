@@ -53,19 +53,20 @@ pageEncoding="UTF-8"
       </div>
       <div class="form-group">
         <label for="engine">Silnik:</label>
-        <input type="number" class="form-control" id="engine"  path="engine" name="engine" />
+        <input type="number" class="form-control" id="engine"  path="engine" name="engine" required="true" />
       </div>
       <div class="form-group">
         <label for="vin">VIN:</label>
-        <input type="text" class="form-control" minlength="17" maxlength="17" data-error="VIN musi miec dokładnie 17 znaków." id="vin" name="vin" path="vin" />
+        <input type="text" class="form-control" minlength="17" maxlength="17"
+         data-error="VIN musi miec dokładnie 17 znaków." id="vin" name="vin" path="vin" required="true" />
        </div>
       <div class="form-group">
         <label for="mileage">Przebieg:</label>
-        <input type="number" class="form-control" id="mileage" name="mileage" path="mileage" />
+        <input type="number" class="form-control" id="mileage" name="mileage" path="mileage" required="true" />
       </div>
       <div class="form-group">
         <label for="horsepower">KM:</label>
-        <input type="number" class="form-control" id="horsepower" name="horsepower" path="horsepower" />
+        <input type="number" class="form-control" id="horsepower" name="horsepower" path="horsepower" required="true" />
       </div>
       <div class="form-group">
         <label for="productionDate">Data produkcji:</label>

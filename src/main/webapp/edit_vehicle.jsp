@@ -66,7 +66,7 @@ pageEncoding="UTF-8"
       </div>
       <div class="form-group">
         <label for="engine">Silnik:</label>
-        <input type="number" class="form-control" id="engine"  path="engine" name="engine" />
+        <input type="number" class="form-control" id="engine"  path="engine" name="engine" required="true" />
       </div>
       <div class="form-group">
         <label for="vin">VIN:</label>
@@ -74,15 +74,15 @@ pageEncoding="UTF-8"
        </div>
       <div class="form-group">
         <label for="mileage">Przebieg:</label>
-        <input type="number" class="form-control" id="mileage" name="mileage" path="mileage" />
+        <input type="number" class="form-control" id="mileage" name="mileage" path="mileage" required="true" />
       </div>
       <div class="form-group">
         <label for="horsepower">KM:</label>
-        <input type="number" class="form-control" id="horsepower" name="horsepower" path="horsepower" />
+        <input type="number" class="form-control" id="horsepower" name="horsepower" path="horsepower" required="true" />
       </div>
       <div class="form-group">
         <label for="productionDate">Data produkcji:</label>
-        <input type="date" class="form-control" id="productionDate" name="productionDate" path="productionDate" />
+        <input type="date" class="form-control" id="productionDate" name="productionDate" path="productionDate" required="true" />
       </div>
       <div class="checkbox">
         <label><input type="checkbox" checked="checked"  path="available" id="available" name="available"/>Dostepny</label>

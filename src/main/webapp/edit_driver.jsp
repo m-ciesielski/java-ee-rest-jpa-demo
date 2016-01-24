@@ -57,28 +57,32 @@ pageEncoding="UTF-8"
       <input type="hidden" path="id" id="driverId" name="id"/>
       <div class="form-group">
         <label for="firstName">Imie:</label>
-        <input type="text" class="form-control" name="firstName"  path="firstName" id="firstName" required="true" />
+        <input type="text" class="form-control" minlength="2" name="firstName"  path="firstName" id="firstName"
+         required="true" />
       </div>
       <div class="form-group">
         <label for="lastName">Nazwisko:</label>
-        <input type="text" class="form-control" id="lastName"  path="lastName" name="lastName" required="true" />
+        <input type="text" class="form-control" id="lastName" minlength="2"  path="lastName" name="lastName"
+         required="true" />
       </div>
       <div class="form-group">
         <label for="pesel">Pesel:</label>
-        <input type="text" class="form-control" id="pesel"  path="pesel" pattern="\d{11}" minlength="11" maxlength="11" data-error="Pesel musi miec dokładnie 11 znaków." name="pesel" required="true" />
+        <input type="text" class="form-control" id="pesel"  path="pesel" pattern="\d{11}" minlength="11" maxlength="11"
+         data-error="Pesel musi miec dokładnie 11 znaków." name="pesel" required="true" />
       </div>
       <div class="form-group">
         <label for="salary">Pensja:</label>
         <div class="input-group">
             <span class="input-group-addon">zł</span>
-            <input type="number" class="form-control" id="salary" name="salary"  path="salary" />
+            <input type="number" class="form-control" id="salary" name="salary"  path="salary" required="true"/>
         </div>
        </div>
       <div class="form-group">
         <label for="salaryBonus">Premia:</label>
         <div class="input-group">
             <span class="input-group-addon">zł</span>
-            <input type="number" class="form-control" id="salaryBonus" name="salaryBonus"  path="salaryBonus" placeholder="zł" />
+            <input type="number" class="form-control" id="salaryBonus" name="salaryBonus"  path="salaryBonus"
+             placeholder="zł" />
         </div>
       </div>
       <div class="form-group">
