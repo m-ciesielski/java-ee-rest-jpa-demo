@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/main.xhtml">
+
+
+
+    <ui:define name="scripts">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- bootbox.js at 4.4.0 -->
+        <script
+                src="https://rawgit.com/makeusabrew/bootbox/f3a04a57877cab071738de558581fbc91812dce9/bootbox.js"></script>
+
+    </ui:define>
+
+    <ui:define name="content">
+        <a type="button" class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/drivers.jsp">Kierowcy</a>
+        <a type="button" class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/vehicles.jsp">Pojazdy</a>
+            </ui:define>
+
+
+</ui:composition>

@@ -1,8 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><ui:insert name="windowTitle">#{msg.mainWindowTitle}</ui:insert>
@@ -21,15 +23,28 @@
                         class="icon-bar"></span> <span class="icon-bar"></span> <span
                         class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#{request.contextPath}/index.jsp">java_ee_demo</a>
+                <a class="navbar-brand" href="#{request.contextPath}/index.xhtml">java_ee_demo</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="inactive"><a href="#{request.contextPath}/drivers.jsp">Kierowcy</a></li>
-                    <li class="inactive"><a href="#{request.contextPath}/vehicles.jsp">Pojazdy</a></li>
-                    <li class="inactive"><a href="#{request.contextPath}/clients.jsp">Klienci</a></li>
+                    <li class="inactive"><a href="#{request.contextPath}/drivers.xhtml">Kierowcy</a></li>
+                    <li class="inactive"><a href="#{request.contextPath}/vehicles.xhtml">Pojazdy</a></li>
+                    <li class="inactive"><a href="#{request.contextPath}/clients.xhtml">Klienci</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <c:choose>
+                        <c:when test="#{request.getUserPrincipal() == null}">
+                            <li><a href="#{request.contextPath}/login.xhtml">Zaloguj się</a></li>
+                        </c:when>
+                        <c:otherwise>
+                            <li><a href="#">#{request.getUserPrincipal()}</a></li>
+                            <li><a href="#{request.contextPath}/logout">Wyloguj się</a></li>
+                        </c:otherwise>
+                    </c:choose>
                 </ul>
             </div>
+
+
             <!--/.nav-collapse -->
         </div>
         <!--/.container-fluid -->

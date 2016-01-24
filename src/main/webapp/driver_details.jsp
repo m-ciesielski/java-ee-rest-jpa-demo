@@ -42,12 +42,12 @@ pageEncoding="UTF-8"
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">logistics_mgmt</a>
+              <a class="navbar-brand" href="${pageContext.request.contextPath}/index.xhtml">logistics_mgmt</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="${pageContext.request.contextPath}/drivers.jsp">Kierowcy</a></li>
-                <li class="inactive"><a href="${pageContext.request.contextPath}/vehicles.jsp">Pojazdy</a></li>
+                <li class="active"><a href="${pageContext.request.contextPath}/drivers.xhtml">Kierowcy</a></li>
+                <li class="inactive"><a href="${pageContext.request.contextPath}/vehicles.xhtml">Pojazdy</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
@@ -87,7 +87,7 @@ pageEncoding="UTF-8"
         <label><input type="checkbox" checked="checked"  path="available" id="available" name="available" disabled/>Dostepny</label>
       </div>
 
-        <a class="btn btn-success" href="${pageContext.request.contextPath}/drivers.jsp">Przejdź do listy kierowców</a>
+        <a class="btn btn-success" href="${pageContext.request.contextPath}/drivers.xhtml">Przejdź do listy kierowców</a>
   </form>
 </body>
 </html>

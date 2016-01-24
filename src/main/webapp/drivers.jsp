@@ -45,13 +45,13 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">java_ee_demo</a>
+				<a class="navbar-brand" href="${pageContext.request.contextPath}/index.xhtml">java_ee_demo</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="<%= request.getContextPath() %>/drivers.jsp">Kierowcy</a></li>
-					<li class="inactive"><a href="<%= request.getContextPath() %>/vehicles.jsp">Pojazdy</a></li>
-					<li class="inactive"><a href="<%= request.getContextPath() %>/clients.jsp">Klienci</a></li>
+					<li class="active"><a href="<%= request.getContextPath() %>/drivers.xhtml">Kierowcy</a></li>
+					<li class="inactive"><a href="<%= request.getContextPath() %>/vehicles.xhtml">Pojazdy</a></li>
+					<li class="inactive"><a href="<%= request.getContextPath() %>/clients.xhtml">Klienci</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
