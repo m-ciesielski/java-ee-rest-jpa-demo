@@ -57,12 +57,12 @@ pageEncoding="UTF-8"
       <input type="hidden" path="id" id="driverId" name="id"/>
       <div class="form-group">
         <label for="firstName">Imie:</label>
-        <input type="text" class="form-control" minlength="2" name="firstName"  path="firstName" id="firstName"
+        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" name="firstName"  path="firstName" id="firstName"
          required="true" />
       </div>
       <div class="form-group">
         <label for="lastName">Nazwisko:</label>
-        <input type="text" class="form-control" id="lastName" minlength="2"  path="lastName" name="lastName"
+        <input type="text" class="form-control" id="lastName" pattern="^[a-zA-Z\s]*$" minlength="2"  path="lastName" name="lastName"
          required="true" />
       </div>
       <div class="form-group">

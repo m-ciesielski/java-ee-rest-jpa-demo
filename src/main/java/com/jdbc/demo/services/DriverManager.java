@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.List;
  */
 
 @Stateless
+@ManagedBean
+@RequestScoped
 public class DriverManager implements DriverDAO {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(DriverManager.class);

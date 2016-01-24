@@ -1,0 +1,103 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/main.xhtml">
+
+
+
+    <ui:define name="scripts">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- bootbox.js at 4.4.0 -->
+        <script
+                src="https://rawgit.com/makeusabrew/bootbox/f3a04a57877cab071738de558581fbc91812dce9/bootbox.js"></script>
+        <script>
+        $(document).ready(function(){
+        $(".delete-driver-button").button().on(
+                "click",
+                function() {
+                    var $this = $(this).closest('tr').children();
+                    var driverFirstName = $this.eq(1).text();
+                    var driverLastName = $this.eq(2).text();
+                    var driverPesel = $this.eq(3).text();
+                    driverId = $this.eq(0).text();
+                    console.log("deleting");
+                    bootbox.confirm("Usunąć kierowcę " + driverFirstName + " "
+                            + driverLastName + "(" + driverPesel + ")?",
+                            function(result) {
+                                if (result == true)
+                                    deleteDriver(driverId, ctx);
+                            });
+        });
+        });
+    </script>
+
+    </ui:define>
+
+<ui:define name="content">
+
+<a href="#{request.contextPath}/drivers/add" class="btn btn-success">Dodaj kierowcę</a>
+
+<h:dataTable class="table table-hover" id="drivers_table" value="#{driverManager.all}" var="driver">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Imie</td>
+        <td>Nazwisko</td>
+        <td>PESEL</td>
+        <td>Pensja</td>
+        <td>Premia</td>
+        <td>Adres</td>
+        <td>Szczegóły</td>
+        <td>Edycja</td>
+        <td>Usuwanie</td>
+    </tr>
+    </thead>
+    <h:column>
+        <f:facet name="header">Id</f:facet>
+        #{driver.id}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Imię</f:facet>
+        #{driver.firstName}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Nazwisko</f:facet>
+        #{driver.lastName}
+    </h:column>
+    <h:column>
+        <f:facet name="header">PESEL</f:facet>
+        #{driver.PESEL}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Pensja</f:facet>
+        #{driver.salary}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Premia</f:facet>
+        #{driver.salaryBonus}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Adres</f:facet>
+        #{driver.address}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Szczegóły</f:facet>
+        <a class="btn btn-default details-driver-button" href="drivers/#{driver.id}"><span class="glyphicon glyphicon-user" aria-hidden="true"/></a>
+    </h:column>
+    <h:column>
+        <f:facet name="header">Edycja</f:facet>
+        <a class="btn btn-primary edit-driver-button" href="drivers/edit/#{driver.id}">Edytuj</a>
+    </h:column>
+    <h:column>
+        <f:facet name="header">Usuwanie</f:facet>
+        <a class="btn btn-danger delete-driver-button" id="delete-button-#{driver.id}">Usuń</a>
+    </h:column>
+</h:dataTable>
+
+</ui:define>
+
+
+</ui:composition>
