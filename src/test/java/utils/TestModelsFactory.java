@@ -1,6 +1,6 @@
 package utils;
 
-import com.jdbc.demo.domain.*;
+import com.jee.demo.domain.*;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -94,7 +94,7 @@ public abstract class TestModelsFactory {
     }
 
     public static FreightTransport createTestFreightTransport1(Client client, List<Driver> drivers, List<Vehicle> vehicles,
-                                                              Address loadAddress, Address unloadAddress){
+                                                               Address loadAddress, Address unloadAddress){
         FreightTransport freightTransport1 = new FreightTransport();
         freightTransport1.setFinished(false);
         freightTransport1.setValue(new BigDecimal(45000).setScale(2, BigDecimal.ROUND_CEILING));

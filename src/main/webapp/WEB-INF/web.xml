@@ -20,7 +20,7 @@
                 com.sun.jersey.config.property.packages
             </param-name>
             <param-value>
-                com.jdbc.demo.web.rest;org.codehaus.jackson.jaxrs
+                com.jee.demo.web.rest;org.codehaus.jackson.jaxrs
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -32,22 +32,22 @@
 
     <context-param>
         <param-name>drivers</param-name>
-        <param-value>com.jdbc.demo.services.DriverManager</param-value>
+        <param-value>com.jee.demo.services.DriverManager</param-value>
     </context-param>
 
     <context-param>
         <param-name>addresses</param-name>
-        <param-value>com.jdbc.demo.services.AddressManager</param-value>
+        <param-value>com.jee.demo.services.AddressManager</param-value>
     </context-param>
 
     <filter>
         <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>com.jdbc.demo.web.AuthenticationFilter</filter-class>
+        <filter-class>com.jee.demo.web.filters.AuthenticationFilter</filter-class>
     </filter>
 
     <filter>
         <filter-name>RequestLoggingFilter</filter-name>
-        <filter-class>com.jdbc.demo.web.RequestLoggingFilter</filter-class>
+        <filter-class>com.jee.demo.web.filters.RequestLoggingFilter</filter-class>
     </filter>
 
     <filter-mapping>
@@ -63,7 +63,7 @@
 
     <servlet>
     <servlet-name>DriverEditServlet</servlet-name>
-    <servlet-class>com.jdbc.demo.web.routing.DriverEditServlet</servlet-class>
+    <servlet-class>com.jee.demo.web.routing.DriverEditServlet</servlet-class>
 </servlet>
 
     <servlet-mapping>
@@ -73,7 +73,7 @@
 
     <servlet>
         <servlet-name>DriverAddServlet</servlet-name>
-        <servlet-class>com.jdbc.demo.web.routing.DriverAddServlet</servlet-class>
+        <servlet-class>com.jee.demo.web.routing.DriverAddServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -83,7 +83,7 @@
 
     <servlet>
         <servlet-name>DriverDetailsServlet</servlet-name>
-        <servlet-class>com.jdbc.demo.web.routing.DriverDetailsServlet</servlet-class>
+        <servlet-class>com.jee.demo.web.routing.DriverDetailsServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -93,7 +93,7 @@
 
     <servlet>
         <servlet-name>VehicleEditServlet</servlet-name>
-        <servlet-class>com.jdbc.demo.web.routing.VehicleEditServlet</servlet-class>
+        <servlet-class>com.jee.demo.web.routing.VehicleEditServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -103,7 +103,7 @@
 
     <servlet>
         <servlet-name>VehicleAddServlet</servlet-name>
-        <servlet-class>com.jdbc.demo.web.routing.VehicleAddServlet</servlet-class>
+        <servlet-class>com.jee.demo.web.routing.VehicleAddServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
