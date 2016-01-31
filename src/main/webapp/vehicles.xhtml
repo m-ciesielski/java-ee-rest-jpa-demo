@@ -13,6 +13,7 @@
                 src="https://rawgit.com/makeusabrew/bootbox/f3a04a57877cab071738de558581fbc91812dce9/bootbox.js"></script>
         <script>
         $(document).ready(function(){
+        var ctx = "${pageContext.request.contextPath}";
         $( ".delete-vehicle-button" ).button().on( "click", function() {
                     var $this = $(this).closest('tr').children();
                     var vehicleBrand = $this.eq(1).text();
