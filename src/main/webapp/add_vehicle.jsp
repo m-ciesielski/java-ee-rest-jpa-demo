@@ -24,7 +24,8 @@ pageEncoding="UTF-8"
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button model="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <button model="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+               aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -41,7 +42,8 @@ pageEncoding="UTF-8"
           </div><!--/.container-fluid -->
         </nav>
 
-  <form name="add_vehicle_form" id="add_vehicle_form" data-toggle="validator" onsubmit="return addVehicle('${pageContext.request.contextPath}');;">
+  <form name="add_vehicle_form" id="add_vehicle_form" data-toggle="validator"
+   onsubmit="return addVehicle('${pageContext.request.contextPath}');">
       <input type="hidden" path="vehicleId" id="vehicleId" name="id"/>
       <div class="form-group">
         <label for="brand">Marka:</label>

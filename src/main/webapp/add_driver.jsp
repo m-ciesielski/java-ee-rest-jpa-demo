@@ -34,7 +34,8 @@ pageEncoding="UTF-8"
 <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+               data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -51,18 +52,22 @@ pageEncoding="UTF-8"
           </div><!--/.container-fluid -->
         </nav>
 
-  <form name="add_driver_form" id="add_driver_form" modelAttribute="addDriverForm" data-toggle="validator" onsubmit="return addDriver('${pageContext.request.contextPath}');">
+  <form name="add_driver_form" id="add_driver_form" modelAttribute="addDriverForm" data-toggle="validator"
+   onsubmit="return addDriver('${pageContext.request.contextPath}');">
       <div class="form-group">
         <label for="firstName">Imie:</label>
-        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" name="firstName"  path="firstName" id="firstName" required="true" />
+        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" name="firstName"
+          path="firstName" id="firstName" required="true" />
       </div>
       <div class="form-group">
         <label for="lastName">Nazwisko:</label>
-        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" id="lastName"  path="lastName" name="lastName" required="true" />
+        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" id="lastName"  path="lastName"
+         name="lastName" required="true" />
       </div>
       <div class="form-group">
               <label for="pesel">Pesel:</label>
-              <input type="text" class="form-control" id="pesel"  path="pesel" pattern="\d{11}" minlength="11" maxlength="11" data-error="pesel musi miec dokładnie 11 znaków." name="pesel" required="true" />
+              <input type="text" class="form-control" id="pesel"  path="pesel" pattern="\d{11}" minlength="11" maxlength="11"
+               data-error="pesel musi miec dokładnie 11 znaków." name="pesel" required="true" />
             </div>
             <div class="form-group">
               <label for="salary">Pensja:</label>

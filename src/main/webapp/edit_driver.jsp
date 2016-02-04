@@ -36,7 +36,8 @@ pageEncoding="UTF-8"
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+               data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -53,16 +54,19 @@ pageEncoding="UTF-8"
           </div><!--/.container-fluid -->
         </nav>
 
-  <form name="edit_driver_form" id="edit_driver_form" modelAttribute="editDriverForm" data-toggle="validator" onsubmit="return editDriver('${pageContext.request.contextPath}');">
+  <form name="edit_driver_form" id="edit_driver_form" modelAttribute="editDriverForm"
+   data-toggle="validator" onsubmit="return editDriver('${pageContext.request.contextPath}');">
       <input type="hidden" path="id" id="driverId" name="id"/>
       <div class="form-group">
         <label for="firstName">Imie:</label>
-        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" name="firstName"  path="firstName" id="firstName"
+        <input type="text" class="form-control" minlength="2" pattern="^[a-zA-Z\s]*$" name="firstName"
+          path="firstName" id="firstName"
          required="true" />
       </div>
       <div class="form-group">
         <label for="lastName">Nazwisko:</label>
-        <input type="text" class="form-control" id="lastName" pattern="^[a-zA-Z\s]*$" minlength="2"  path="lastName" name="lastName"
+        <input type="text" class="form-control" id="lastName" pattern="^[a-zA-Z\s]*$"
+         minlength="2"  path="lastName" name="lastName"
          required="true" />
       </div>
       <div class="form-group">

@@ -37,7 +37,8 @@ pageEncoding="UTF-8"
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button model="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <button model="button" class="navbar-toggle collapsed" data-toggle="collapse"
+               data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -54,7 +55,8 @@ pageEncoding="UTF-8"
           </div><!--/.container-fluid -->
         </nav>
 
-  <form name="edit_vehicle_form" id="edit_vehicle_form" data-toggle="validator" onsubmit="return editVehicle('${pageContext.request.contextPath}');">
+  <form name="edit_vehicle_form" id="edit_vehicle_form" data-toggle="validator"
+   onsubmit="return editVehicle('${pageContext.request.contextPath}');">
       <input type="hidden" path="vehicleId" id="vehicleId" name="id"/>
       <div class="form-group">
         <label for="brand">Marka:</label>
@@ -70,7 +72,8 @@ pageEncoding="UTF-8"
       </div>
       <div class="form-group">
         <label for="vin">VIN:</label>
-        <input type="text" class="form-control" minlength="17" maxlength="17" data-error="VIN musi miec dokładnie 17 znaków." id="vin" name="vin" path="vin" />
+        <input type="text" class="form-control" minlength="17" maxlength="17"
+         data-error="VIN musi miec dokładnie 17 znaków." id="vin" name="vin" path="vin" />
        </div>
       <div class="form-group">
         <label for="mileage">Przebieg:</label>
